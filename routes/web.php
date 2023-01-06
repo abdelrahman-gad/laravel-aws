@@ -20,5 +20,6 @@ Route::get('/', function () {
 
 
 Route::get('/users',function(){
+    // updated 
    return  User::all();
 });
