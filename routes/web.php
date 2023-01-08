@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SolariumController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +21,8 @@ Route::get('/', function () {
 
 
 Route::get('/users',function(){
-    // updated 
+    // updated
    return  User::all();
 });
+
+Route::get('/ping', [SolariumController::class,'ping']);
